@@ -1,0 +1,11 @@
+# name: benchmark/vortex/data-983040-100-car-0.8-sum,avg,min,max-1.benchmark
+# description: Run query data-983040-100-car-0.8
+# group: [vortex]
+
+require vortex
+
+load
+CREATE VIEW vortex_table AS SELECT * FROM read_vortex("synth-data/vortex/data-983040-100-car-0.8.vortex");
+
+run
+SELECT SUM(col0),AVG(col0),MIN(col0),MAX(col0) FROM vortex_table;

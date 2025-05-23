@@ -1,0 +1,11 @@
+# name: benchmark/parquet/data-65536-100-width-0.5-sum,avg,min,max-1.benchmark
+# description: Run query data-65536-100-width-0.5
+# group: [parquet]
+
+require parquet
+
+load
+CREATE VIEW parquet_table AS SELECT * FROM read_parquet("synth-data/parquet/data-65536-100-width-0.5.parquet");
+
+run
+SELECT SUM(col0),AVG(col0),MIN(col0),MAX(col0) FROM parquet_table;

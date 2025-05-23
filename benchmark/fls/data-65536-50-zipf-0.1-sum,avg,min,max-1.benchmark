@@ -1,0 +1,11 @@
+# name: benchmark/fls/data-65536-50-zipf-0.1-sum,avg,min,max-1.benchmark
+# description: Run query data-65536-50-zipf-0.1
+# group: [fast_lanes]
+
+require fast_lanes
+
+load
+CREATE VIEW fast_lanes_table AS SELECT * FROM read_fls("synth-data/fls/data-65536-50-zipf-0.1.fls");
+
+run
+SELECT SUM(COLUMN_0),AVG(COLUMN_0),MIN(COLUMN_0),MAX(COLUMN_0) FROM fast_lanes_table;

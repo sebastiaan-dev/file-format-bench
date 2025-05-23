@@ -1,0 +1,9 @@
+[submodule "duckdb-fastlanes"]
+	path = duckdb-fastlanes
+	url = git@github.com:sebastiaan-dev/duckdb-fastlanes.git
+[submodule "OpenFormat-Public"]
+	path = OpenFormat-Public
+	url = git@github.com:XinyuZeng/OpenFormat-Public.git
+[submodule "vortex"]
+	path = vortex
+	url = git@github.com:vortex-data/vortex.git
